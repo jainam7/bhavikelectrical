@@ -107,8 +107,8 @@ export default function Services() {
             Ahmedabad electrical solutions
           </span>
           <h1>
-            Electrical services for Ahmedabad homes, shops, and industrial
-            sites.
+            Reliable Electrical Services in Ahmedabad for Homes, Businesses &
+            Industrial Sites.
           </h1>
           <p>
             Choose a category to explore how Bhavik Electricals supports

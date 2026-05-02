@@ -86,7 +86,7 @@ const carouselSlides = [
     text: "Clean lighting layouts for showrooms, counters, signage, product displays, and customer-facing spaces.",
   },
   {
-    src: "https://images.unsplash.com/photo-1770816307611-4147a8be5d2b?auto=format&fit=crop&w=1400&q=85",
+    src: "https://images.unsplash.com/photo-1665832966717-238c3a7e2bf7?auto=format&fit=crop&w=1200&q=85",
     alt: "Modern cafe interior with pendant lights",
     eyebrow: "Cafe and restaurant",
     title: "Warm interiors that feel active and premium",
@@ -135,7 +135,7 @@ export default function Home() {
 
   return (
     <>
-      <section className="hero-section">
+      {/* <section className="hero-section">
         <div className="hero-media" aria-hidden="true" />
         <div className="hero-overlay" />
 
@@ -145,7 +145,10 @@ export default function Home() {
               <ShieldCheck size={16} />
               Ahmedabad electrical contractor
             </span>
-            <h1>Electrical work for Ahmedabad homes, shops, and factories.</h1>
+            <h1>
+              Trusted Electrical Contractor in Ahmedabad Fast, Safe & Certified
+              Electrical Services for Homes & Businesses
+            </h1>
             <p>
               Bhavik Electricals handles wiring, modern lighting, panel
               upgrades, and maintenance for local homes, showrooms, cafes,
@@ -184,6 +187,89 @@ export default function Home() {
                   </span>
                 </div>
               </div>
+              <div className="stat-grid">
+                {heroStats.map((stat) => (
+                  <div key={stat.label}>
+                    <strong>{stat.value}</strong>
+                    <span>{stat.label}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> */}
+
+      <section className="hero-section">
+        <div className="hero-media" aria-hidden="true" />
+        <div className="hero-overlay" />
+
+        <div className="container hero-content">
+          <div className="hero-copy reveal-up">
+            <span className="eyebrow">
+              <ShieldCheck size={16} />
+              Trusted electrical contractor in Ahmedabad
+            </span>
+
+            <h1>
+              {/* Need an Electrician in Ahmedabad?
+              <br /> */}
+              Fast, Safe & Reliable Electrical Services
+            </h1>
+
+            <p>
+              30+ years of experience in wiring, panel upgrades, lighting, and
+              electrical maintenance for homes, shops, offices, and factories.
+              <br />
+              Same-day service available.
+            </p>
+
+            {/* 🔥 NEW TRUST POINTS */}
+            <div className="hero-trust-points">
+              <span>✔ 30+ Years Experience</span>
+              <span>✔ Emergency Support</span>
+              <span>✔ Ahmedabad Based</span>
+            </div>
+
+            <div className="hero-actions">
+              <Link className="button button-primary" to="/contact">
+                Get Free Quote
+                <ArrowRight size={18} />
+              </Link>
+
+              <a className="button button-glass" href="tel:+919427622474">
+                <Phone size={18} />
+                Call Now
+              </a>
+            </div>
+
+            {/* 🔥 SOCIAL PROOF */}
+            <div className="hero-proof">
+              ⭐ Trusted by 500+ customers across Ahmedabad
+            </div>
+          </div>
+
+          <div className="hero-visual reveal-up delay-1">
+            <img
+              className="hero-visual-main"
+              src="https://images.unsplash.com/photo-1757817301348-f91ce527b09b?auto=format&fit=crop&w=1000&q=85"
+              alt="Electrical lighting work"
+            />
+            <img
+              className="hero-visual-side"
+              src="https://images.unsplash.com/photo-1758101755915-462eddc23f57?auto=format&fit=crop&w=700&q=85"
+              alt="Electrician working on panel"
+            />
+
+            <div className="hero-card">
+              <div className="hero-card-top">
+                <Zap size={26} />
+                <div>
+                  <strong>Emergency Electrical Support</strong>
+                  <span>Available across Ahmedabad</span>
+                </div>
+              </div>
+
               <div className="stat-grid">
                 {heroStats.map((stat) => (
                   <div key={stat.label}>
@@ -296,7 +382,7 @@ export default function Home() {
           </div>
           <div className="process-copy">
             <span className="section-kicker">Our method</span>
-            <h2>Planned properly for Indian wiring conditions.</h2>
+            <h2>Planned for real usage, proper load, and long-term safety.</h2>
             <p>
               Every job starts with the site reality: sanctioned load, usage,
               cable routing, earthing, safety, and future expansion. That keeps

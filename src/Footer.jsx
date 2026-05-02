@@ -1,4 +1,5 @@
 import { Bolt, Mail, MapPin, Phone } from "lucide-react";
+import logo from "./assets/logo.svg";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
@@ -7,7 +8,7 @@ export default function Footer() {
       <div className="container footer-grid">
         <div>
           <Link className="footer-brand" to="/">
-            <Bolt size={24} />
+            <img src={logo} alt="Bhavik Electricals" />
             <span>Bhavik Electricals</span>
           </Link>
           <p>
@@ -35,7 +36,7 @@ export default function Footer() {
           </a>
           <span>
             <MapPin size={16} />
-            Gujarat, India
+            Ahmedabad,Gujarat, India
           </span>
         </div>
       </div>

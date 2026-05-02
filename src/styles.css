@@ -303,6 +303,21 @@ p {
   transform: scale(1.03);
 }
 
+.hero-trust-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 16px 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.hero-proof {
+  margin-top: 12px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
 .hero-overlay {
   background:
     linear-gradient(
@@ -1017,7 +1032,7 @@ p {
 }
 
 .about-hero {
-  background-image: url("https://images.unsplash.com/photo-1758101755915-462eddc23f57?auto=format&fit=crop&w=2000&q=85");
+  background-image: url("https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1600&h=900&fit=crop&q=85&auto=format");
 }
 
 .contact-hero {

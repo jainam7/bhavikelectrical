@@ -35,8 +35,6 @@ export default function Contact() {
 
   const googleSheetUrl = import.meta.env.VITE_GOOGLE_SHEET_URL;
 
-  console.log("url--", googleSheetUrl);
-
   async function handleSubmit(event) {
     event.preventDefault();
     setLoading(true);
@@ -75,12 +73,13 @@ export default function Contact() {
         <div className="container page-hero-content">
           <span className="eyebrow">
             <Phone size={16} />
-            Contact
+            CONTACT BHAVIK ELECTRICALS
           </span>
-          <h1>Tell us what needs power, repair, or inspection.</h1>
+          <h1>Tell Us Your Electrical Requirement — We’ll Handle the Rest.</h1>
           <p>
-            Share a few details and the team will help you plan the safest next
-            step for your home, office, shop, or factory.
+            Share your details and our team will quickly assess your requirement
+            and guide you with the safest and most reliable solution for your
+            home, shop, office, or factory.
           </p>
         </div>
       </section>

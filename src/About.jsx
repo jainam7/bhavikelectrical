@@ -19,9 +19,9 @@ const values = [
 ];
 
 const milestones = [
-  "2006: Started local Ahmedabad service work",
-  "2014: Expanded into shops, offices, and showrooms",
-  "2020: Added industrial and safety audit support",
+  "1993: Started local electrical services in Ahmedabad",
+  "2005: Expanded into homes, shops, and commercial spaces",
+  "2015: Delivered large-scale projects and industrial support",
   "Today: Complete electrical solutions across Ahmedabad",
 ];
 
@@ -34,11 +34,12 @@ export default function About() {
             <Award size={16} />
             About Bhavik Electricals
           </span>
-          <h1>Ahmedabad electricians with a practical, safety-led approach.</h1>
+          <h1>
+            Experienced Electrical Contractors in Ahmedabad You Can Trust.
+          </h1>
           <p>
-            We combine field experience with careful planning so homes,
-            businesses, and factories across Ahmedabad get electrical systems
-            that work cleanly from day one.
+            We combine decades of field experience with careful planning to
+            deliver safe, efficient, and long-lasting electrical solutions.
           </p>
         </div>
       </section>
@@ -48,18 +49,20 @@ export default function About() {
           <div>
             <span className="section-kicker">Our story</span>
             <h2>
-              Powering Ahmedabad spaces with trust for more than 18 years.
+              Powering Ahmedabad with trusted electrical expertise for over 30
+              years.
             </h2>
             <p>
-              Bhavik Electricals began with local repair and wiring work in
-              Ahmedabad and grew into a full-service electrical team. The focus
-              has stayed the same: understand the site, do the work neatly, and
-              leave the customer with a safer setup than before.
+              Bhavik Electricals started with local repair and wiring services
+              in Ahmedabad and has grown into a trusted full-service electrical
+              team. For over 30 years, our approach has remained simple —
+              understand the site, deliver clean and safe work, and ensure every
+              customer gets a more reliable and long-lasting electrical setup.
             </p>
             <div className="timeline">
               {milestones.map((item) => (
                 <div key={item}>
-                  <CheckCircle2 size={18} />
+                  <CheckCircle2 size={20} className="m-2" />
                   <span>{item}</span>
                 </div>
               ))}
@@ -72,8 +75,8 @@ export default function About() {
               alt="Technician testing an electrical panel"
             />
             <div className="floating-note">
-              <strong>2,500+</strong>
-              <span>Completed service and project visits</span>
+              <strong>30+</strong>
+              <span>Years of trusted electrical service across Ahmedabad</span>
             </div>
           </div>
         </div>
@@ -84,7 +87,10 @@ export default function About() {
           {values.map((value) => {
             const Icon = value.icon;
             return (
-              <article className="feature-card" key={value.title}>
+              <article
+                className="feature-card interactive-card"
+                key={value.title}
+              >
                 <Icon size={30} />
                 <h3>{value.title}</h3>
                 <p>{value.text}</p>

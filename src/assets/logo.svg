@@ -1,0 +1,45 @@
+<svg
+  width="200"
+  height="200"
+  viewBox="0 0 200 200"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <circle cx="100" cy="100" r="95" fill="#0066CC" />
+  <circle cx="100" cy="100" r="85" fill="#0052A3" />
+
+  <path
+    d="M 120 40 L 80 100 L 100 100 L 75 160 L 125 90 L 105 90 Z"
+    fill="#FFD700"
+    stroke="#FFA500"
+    stroke-width="2"
+  />
+
+  <path
+    d="M 65 60 L 65 140 L 85 140 C 95 140 105 135 105 125 C 105 120 102 115 98 113 C 102 111 105 106 105 100 C 105 90 95 85 85 85 L 65 85 M 75 95 L 82 95 C 87 95 90 97 90 100 C 90 103 87 105 82 105 L 75 105 Z M 75 115 L 83 115 C 88 115 92 117 92 122 C 92 127 88 130 83 130 L 75 130 Z"
+    fill="#FFFFFF"
+    opacity="0.3"
+  />
+
+  <defs>
+    <path
+      id="circlePath"
+      d="M 100,100 m -75,0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0"
+    />
+  </defs>
+
+  <text fill="#FFFFFF" font-size="14" font-weight="700" font-family="Arial, sans-serif">
+    <textPath href="#circlePath" startOffset="23%">BHAVIK ELECTRICALS</textPath>
+  </text>
+
+  <text
+    x="100"
+    y="185"
+    text-anchor="middle"
+    fill="#FFFFFF"
+    font-size="12"
+    font-weight="600"
+    font-family="Arial, sans-serif"
+  >
+    EST. 1994
+  </text>
+</svg>

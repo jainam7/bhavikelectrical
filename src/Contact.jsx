@@ -35,7 +35,7 @@ export default function Contact() {
 
   const googleSheetUrl = import.meta.env.VITE_GOOGLE_SHEET_URL;
 
-  console.log(googleSheetUrl);
+  console.log("url--", googleSheetUrl);
 
   async function handleSubmit(event) {
     event.preventDefault();

@@ -203,7 +203,7 @@ export default function Contact() {
               height="450"
               style={{ border: 0, borderRadius: "12px" }}
               allowFullScreen=""
-              loading="lazy"
+              // loading="lazy"
             ></iframe>
           </div>
         </div>

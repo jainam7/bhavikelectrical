@@ -153,7 +153,7 @@ export default function Contact() {
                 required
                 type="tel"
                 pattern="[6-9][0-9]{9}"
-                title="Please enter a valid mobile numberx"
+                title="Please enter a valid mobile number"
               />
             </div>
             <div className="form-row">

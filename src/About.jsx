@@ -59,7 +59,7 @@ export default function About() {
               understand the site, deliver clean and safe work, and ensure every
               customer gets a more reliable and long-lasting electrical setup.
             </p>
-            <div className="timeline">
+            <div className="check-list">
               {milestones.map((item) => (
                 <div key={item}>
                   <CheckCircle2 size={20} className="m-2" />

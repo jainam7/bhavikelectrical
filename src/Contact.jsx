@@ -32,8 +32,22 @@ export default function Contact() {
   const formRef = useRef(null);
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState("");
+  const [error, setError] = useState("");
 
   const googleSheetUrl = import.meta.env.VITE_GOOGLE_SHEET_URL;
+
+  const handleChange = (e) => {
+    const value = e.target.value;
+
+    if (value.length >= 150) {
+      setError("Maximum 150 characters allowed");
+    } else {
+      setError("");
+    }
+
+    setMessage(value);
+  };
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -174,7 +188,17 @@ export default function Contact() {
                 placeholder="Tell us about the work, location, and timeline."
                 rows="5"
                 required
+                maxLength={150}
+                value={message}
+                onChange={handleChange}
               />
+              <div style={{ fontSize: "12px", color: "#666" }}>
+                {message.length}/150
+              </div>
+
+              {error && (
+                <div style={{ color: "red", fontSize: "12px" }}>{error}</div>
+              )}
             </div>
             <button
               className="button button-primary form-submit"

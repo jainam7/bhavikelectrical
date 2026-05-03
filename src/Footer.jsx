@@ -32,7 +32,7 @@ export default function Footer() {
           </a>
           <a href="mailto:bhavikelectricals74@gmail.com">
             <Mail size={16} />
-            bhavikelectricals74@gmail.com
+            Bhavikelectricals74@gmail.com
           </a>
           <span>
             <MapPin size={16} />

@@ -444,7 +444,7 @@ export default function Home() {
         <div className="container trust-band">
           <div>
             <BadgeCheck size={28} />
-            <strong>Licensed technicians</strong>
+            <strong>Licensed Contractor with experienced technicians</strong>
             <span>Trained team with safety-first execution.</span>
           </div>
           <div>

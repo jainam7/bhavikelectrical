@@ -88,11 +88,11 @@ export default function Contact() {
         <div className="container contact-grid">
           <div className="contact-info">
             <span className="section-kicker">Reach us</span>
-            <h2>Quick response for electrical work and maintenance.</h2>
+            <h2>Fast & Reliable Electrical Service Across Ahmedabad.</h2>
             <p>
-              Use the form for project requests or call directly for urgent
-              electrical issues. Replace these placeholder details with your
-              final phone, address, and email before publishing.
+              Contact us for installation, repair, or maintenance. Our team
+              ensures quick response and dependable solutions for your
+              electrical needs.
             </p>
 
             <div className="contact-list">

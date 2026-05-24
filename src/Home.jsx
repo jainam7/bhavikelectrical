@@ -18,6 +18,7 @@ import {
   Zap,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import TestimonialCarousel from "./components/TestimonialCarousel";
 
 const heroStats = [
   { value: "30+", label: "Years experience" },
@@ -439,6 +440,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* TESTIMONIALS CAROUSEL SECTION */}
+      <TestimonialCarousel />
 
       <section className="section">
         <div className="container trust-band">

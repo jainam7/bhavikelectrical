@@ -1,98 +1,29 @@
-import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import {
-  Navigation,
-  Pagination,
-  Autoplay,
-  EffectCoverflow,
-} from "swiper/modules";
-import { Star, Quote, MapPin, Calendar } from "lucide-react";
+  Star,
+  Quote,
+  MapPin,
+  Calendar,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
+import { useGoogleReviews } from "../hooks/useGoogleReviews";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "swiper/css/effect-coverflow";
 import "../styles/testimonials.css";
 
 export default function TestimonialCarousel() {
-  const [reviews, setReviews] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const { reviews, loading, error, rating, totalReviews } = useGoogleReviews();
+  const hasReviews = reviews.length > 0;
 
-  // Sample testimonials - Replace with actual Google API data
-  const sampleTestimonials = [
-    {
-      id: 1,
-      author: "Rajesh Patel",
-      rating: 5,
-      date: "2 months ago",
-      text: "Excellent electrical work! Very professional team. They completed the entire home wiring in 3 days with perfect finishing. Highly recommended!",
-      location: "Ahmedabad",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Rajesh",
-    },
-    {
-      id: 2,
-      author: "Priya Shah",
-      rating: 5,
-      date: "3 months ago",
-      text: "Outstanding service for my office lighting setup. The team understood our requirements perfectly and delivered on time. Very satisfied!",
-      location: "Ahmedabad",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Priya",
-    },
-    {
-      id: 3,
-      author: "Vikram Singh",
-      rating: 5,
-      date: "1 month ago",
-      text: "Great experience with panel upgrade. The electricians were knowledgeable and kept the workspace clean. Will definitely hire again!",
-      location: "Ahmedabad",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Vikram",
-    },
-    {
-      id: 4,
-      author: "Anjali Verma",
-      rating: 5,
-      date: "2 weeks ago",
-      text: "Best electrician service in Ahmedabad! Emergency support was quick and efficient. Professional and trustworthy team.",
-      location: "Ahmedabad",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Anjali",
-    },
-    {
-      id: 5,
-      author: "Deepak Gupta",
-      rating: 5,
-      date: "3 weeks ago",
-      text: "Factory electrical setup was done perfectly. Load balancing and panel work exceeded expectations. Highly reliable service!",
-      location: "Ahmedabad",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Deepak",
-    },
-  ];
+  const getInitials = (name = "") => {
+    const words = name.trim().split(/\s+/).filter(Boolean);
+    const initials = words.slice(0, 2).map((word) => word[0]).join("");
 
-  useEffect(() => {
-    // Fetch Google reviews - Replace with actual API call
-    const fetchReviews = async () => {
-      try {
-        setLoading(true);
-        // TODO: Replace with actual Google Places API call
-        // const response = await fetch('/api/reviews');
-        // const data = await response.json();
-        // setReviews(data);
-
-        // For now, use sample testimonials
-        setReviews(sampleTestimonials);
-        setError(null);
-      } catch (err) {
-        console.error("Error fetching reviews:", err);
-        setError("Failed to load reviews");
-        setReviews(sampleTestimonials); // Fallback to sample data
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchReviews();
-    // sampleTestimonials is constant and defined in component, safe to exclude
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    return initials || "G";
+  };
 
   const StarRating = ({ rating }) => {
     return (
@@ -124,73 +55,55 @@ export default function TestimonialCarousel() {
 
         {/* Carousel */}
         <div className="testimonials-carousel-wrapper">
-          {loading && !reviews.length ? (
+          {loading && !hasReviews ? (
             <div className="loading-spinner">
               <div className="spinner"></div>
               <p>Loading reviews...</p>
             </div>
-          ) : error && !reviews.length ? (
+          ) : error && !hasReviews ? (
             <div className="error-message">
               <p>{error}</p>
             </div>
+          ) : !hasReviews ? (
+            <div className="error-message">
+              <p>No reviews available right now.</p>
+            </div>
           ) : (
             <Swiper
-              modules={[Navigation, Pagination, Autoplay, EffectCoverflow]}
-              effect="coverflow"
+              modules={[Navigation, Pagination, Autoplay]}
               grabCursor={true}
-              centeredSlides={true}
-              slidesPerView="auto"
-              coverflowEffect={{
-                rotate: 50,
-                stretch: 0,
-                depth: 100,
-                modifier: 1,
-                slideShadows: true,
-              }}
+              centeredSlides={false}
+              slidesPerView={1}
+              spaceBetween={24}
+              speed={760}
+              threshold={8}
+              watchSlidesProgress={true}
               pagination={{
                 clickable: true,
-                dynamicBullets: true,
               }}
               navigation={{
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
               }}
               autoplay={{
-                delay: 4500,
+                delay: 5200,
                 disableOnInteraction: false,
+                pauseOnMouseEnter: true,
               }}
-              loop={true}
+              loop={reviews.length > 3}
               className="testimonials-swiper"
               breakpoints={{
                 320: {
                   slidesPerView: 1,
-                  spaceBetween: 20,
-                  coverflowEffect: {
-                    rotate: 25,
-                    stretch: 0,
-                    depth: 80,
-                    modifier: 1,
-                  },
+                  spaceBetween: 16,
                 },
                 768: {
-                  slidesPerView: 1.5,
-                  spaceBetween: 30,
-                  coverflowEffect: {
-                    rotate: 35,
-                    stretch: 0,
-                    depth: 90,
-                    modifier: 1,
-                  },
+                  slidesPerView: 2,
+                  spaceBetween: 22,
                 },
                 1024: {
-                  slidesPerView: 2.5,
-                  spaceBetween: 40,
-                  coverflowEffect: {
-                    rotate: 50,
-                    stretch: 0,
-                    depth: 100,
-                    modifier: 1,
-                  },
+                  slidesPerView: 3,
+                  spaceBetween: 24,
                 },
               }}
             >
@@ -210,11 +123,30 @@ export default function TestimonialCarousel() {
 
                     {/* Author Info */}
                     <div className="author-section">
-                      <img
-                        src={review.image}
-                        alt={review.author}
-                        className="author-avatar"
-                      />
+                      {review.image ? (
+                        <img
+                          src={review.image}
+                          alt={review.author}
+                          className="author-avatar"
+                          onError={(event) => {
+                            const fallback =
+                              event.currentTarget.nextElementSibling;
+
+                            event.currentTarget.style.display = "none";
+                            if (fallback) {
+                              fallback.hidden = false;
+                              fallback.setAttribute("aria-hidden", "false");
+                            }
+                          }}
+                        />
+                      ) : null}
+                      <span
+                        className="author-avatar author-avatar-fallback"
+                        hidden={Boolean(review.image)}
+                        aria-hidden={Boolean(review.image)}
+                      >
+                        {getInitials(review.author)}
+                      </span>
                       <div className="author-info">
                         <h4 className="author-name">{review.author}</h4>
                         <div className="author-meta">
@@ -234,8 +166,20 @@ export default function TestimonialCarousel() {
               ))}
 
               {/* Navigation Buttons */}
-              <div className="swiper-button-prev"></div>
-              <div className="swiper-button-next"></div>
+              <button
+                className="swiper-button-prev"
+                type="button"
+                aria-label="Previous testimonial"
+              >
+                <ChevronLeft size={22} strokeWidth={2.5} />
+              </button>
+              <button
+                className="swiper-button-next"
+                type="button"
+                aria-label="Next testimonial"
+              >
+                <ChevronRight size={22} strokeWidth={2.5} />
+              </button>
 
               {/* Pagination */}
               <div className="swiper-pagination"></div>
@@ -246,11 +190,13 @@ export default function TestimonialCarousel() {
         {/* Trust Stats */}
         <div className="trust-stats-grid">
           <div className="stat-item">
-            <div className="stat-number">500+</div>
+            <div className="stat-number">
+              {totalReviews ? `${totalReviews}+` : "500+"}
+            </div>
             <div className="stat-label">Happy Customers</div>
           </div>
           <div className="stat-item">
-            <div className="stat-number">4.9★</div>
+            <div className="stat-number">{rating ? `${rating}★` : "4.9★"}</div>
             <div className="stat-label">Average Rating</div>
           </div>
           <div className="stat-item">

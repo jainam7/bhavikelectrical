@@ -46,10 +46,9 @@ export default function TestimonialCarousel() {
         {/* Section Header */}
         <div className="testimonials-header">
           <span className="section-kicker">Customer Reviews</span>
-          <h2>What our customers say</h2>
+          <h2>What Our Customers Say</h2>
           <p>
-            Trusted by hundreds of satisfied customers across Ahmedabad for
-            electrical services.
+            Trusted by customers for reliable electrical services.
           </p>
         </div>
 

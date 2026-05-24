@@ -98,22 +98,28 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  overflow: hidden;
   box-shadow: 0 10px 28px rgba(22, 32, 38, 0.08);
   transition:
     border-color 0.2s ease,
-    box-shadow 0.35s ease,
+    box-shadow 0.25s ease,
     opacity 0.35s ease,
-    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+    transform 0.25s ease;
   min-height: 304px;
   border: 1px solid #dde5e8;
+  will-change: transform;
 }
 
 .testimonial-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
   box-shadow:
-    0 18px 34px rgba(22, 32, 38, 0.1),
-    0 0 0 1px rgba(23, 105, 170, 0.08);
+    0 16px 32px rgba(22, 32, 38, 0.12),
+    0 0 0 1px rgba(23, 105, 170, 0.12);
   border-color: rgba(23, 105, 170, 0.22);
+}
+
+.testimonial-card:hover svg {
+  animation: icon-pop 520ms ease;
 }
 
 .testimonial-card::before {
@@ -125,6 +131,16 @@
   height: 4px;
   background: linear-gradient(90deg, #1769aa, #f4c430);
   border-radius: 10px 10px 0 0;
+  opacity: 0.75;
+  transition: opacity 0.25s ease;
+}
+
+.testimonial-card::after {
+  content: none;
+}
+
+.testimonial-card:hover::before {
+  opacity: 1;
 }
 
 /* ===========================
@@ -383,9 +399,14 @@
   .testimonials-swiper .swiper-wrapper,
   .testimonials-swiper .swiper-slide,
   .testimonial-card,
+  .testimonial-card::before,
   .testimonials-swiper .swiper-button-prev,
   .testimonials-swiper .swiper-button-next {
     transition-duration: 0.01ms;
+  }
+
+  .testimonial-card:hover {
+    transform: none;
   }
 }
 

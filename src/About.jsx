@@ -19,7 +19,7 @@ const values = [
 ];
 
 const milestones = [
-  "1993: Started local electrical services in Ahmedabad",
+  "1994: Started local electrical services in Ahmedabad",
   "2005: Expanded into homes, shops, and commercial spaces",
   "2015: Delivered large-scale projects and industrial support",
   "Today: Complete electrical solutions across Ahmedabad",

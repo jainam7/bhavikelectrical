@@ -43,7 +43,7 @@ export default function Footer() {
 
       <div className="container footer-bottom">
         <span>
-          © 1993 - {new Date().getFullYear()} Bhavik Electricals. All rights
+          © 1994 - {new Date().getFullYear()} Bhavik Electricals. All rights
           reserved.
         </span>
       </div>

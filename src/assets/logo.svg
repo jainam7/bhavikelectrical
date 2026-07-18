@@ -2,43 +2,54 @@
   width="200"
   height="200"
   viewBox="0 0 200 200"
+  fill="none"
   xmlns="http://www.w3.org/2000/svg"
+  role="img"
+  aria-labelledby="logoTitle"
 >
-  <circle cx="100" cy="100" r="95" fill="#0066CC" />
-  <circle cx="100" cy="100" r="85" fill="#0052A3" />
+  <title id="logoTitle">Bhavik Electricals</title>
 
-  <path
-    d="M 120 40 L 80 100 L 100 100 L 75 160 L 125 90 L 105 90 Z"
-    fill="#FFD700"
-    stroke="#FFA500"
-    stroke-width="2"
-  />
-
-  <path
-    d="M 65 60 L 65 140 L 85 140 C 95 140 105 135 105 125 C 105 120 102 115 98 113 C 102 111 105 106 105 100 C 105 90 95 85 85 85 L 65 85 M 75 95 L 82 95 C 87 95 90 97 90 100 C 90 103 87 105 82 105 L 75 105 Z M 75 115 L 83 115 C 88 115 92 117 92 122 C 92 127 88 130 83 130 L 75 130 Z"
-    fill="#FFFFFF"
-    opacity="0.3"
-  />
+  <circle cx="100" cy="100" r="94" fill="#0875DA" />
+  <circle cx="100" cy="100" r="84" fill="#0B5AA2" />
+  <circle cx="100" cy="100" r="84" stroke="#0A4F8F" stroke-width="2" />
 
   <defs>
-    <path
-      id="circlePath"
-      d="M 100,100 m -75,0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0"
-    />
+    <path id="brandArc" d="M48 55A69 69 0 0 1 158 135" />
   </defs>
 
-  <text fill="#FFFFFF" font-size="14" font-weight="700" font-family="Arial, sans-serif">
-    <textPath href="#circlePath" startOffset="23%">BHAVIK ELECTRICALS</textPath>
+  <text
+    x="100"
+    y="144"
+    text-anchor="middle"
+    fill="#F4F6F7"
+    font-family="Arial Black, Impact, Inter, Arial, sans-serif"
+    font-size="108"
+    font-weight="900"
+  >
+    B
+  </text>
+
+  <text
+    fill="#FFFFFF"
+    font-family="Inter, Arial, sans-serif"
+    font-size="12.2"
+    font-weight="850"
+    letter-spacing="0.7"
+  >
+    <textPath href="#brandArc" startOffset="50%" text-anchor="middle">
+      BHAVIK ELECTRICALS
+    </textPath>
   </text>
 
   <text
     x="100"
-    y="185"
+    y="176"
     text-anchor="middle"
     fill="#FFFFFF"
-    font-size="12"
-    font-weight="600"
-    font-family="Arial, sans-serif"
+    font-family="Inter, Arial, sans-serif"
+    font-size="13"
+    font-weight="850"
+    letter-spacing="0.4"
   >
     EST. 1994
   </text>

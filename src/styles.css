@@ -149,18 +149,17 @@ p {
   flex: 0 0 auto;
   font-size: 19px;
   font-weight: 850;
-  gap: 10px;
+  gap: 12px;
 }
 
 .brand-mark {
   align-items: center;
-  background: #ffffff;
-  border: 1px solid rgba(0, 82, 163, 0.12);
-  border-radius: 8px;
+  border-radius: 50%;
   display: inline-flex;
   height: 48px;
   justify-content: center;
   overflow: hidden;
+  filter: drop-shadow(0 6px 12px rgba(23, 105, 170, 0.16));
   width: 48px;
 }
 
@@ -1353,21 +1352,22 @@ a.contact-item:hover {
 
 .footer-brand {
   color: #ffffff;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 850;
   gap: 10px;
+  line-height: 1;
   margin-bottom: 14px;
 }
 
 .footer-brand img {
-  background: #ffffff;
-  border-radius: 8px;
+  border-radius: 50%;
   display: block;
   flex: 0 0 auto;
-  height: 44px;
+  height: 48px;
   object-fit: contain;
-  padding: 2px;
-  width: 44px;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.28));
+  transform: translateY(1px);
+  width: 48px;
 }
 
 .site-footer p {
@@ -1387,6 +1387,7 @@ a.contact-item:hover {
   gap: 8px;
   margin-bottom: 10px;
   transition: color 180ms ease;
+  margin-top: 8px;
 }
 
 .site-footer a:hover {

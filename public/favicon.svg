@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 400 400">
+  <!-- Outer ring -->
+  <circle cx="200" cy="200" r="190" fill="#1778D7"/>
+  <!-- Inner circle -->
+  <circle cx="200" cy="200" r="165" fill="#135CA0"/>
+
+  <!-- Invisible arc path for curved top text -->
+  <path id="topArc" d="M 77.84,155.54 A 130,130 0 0 1 322.16,155.54" fill="none"/>
+
+  <text font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="23" fill="#FFFFFF" letter-spacing="1.5">
+    <textPath href="#topArc" xlink:href="#topArc" startOffset="50%" text-anchor="middle">BHAVIK ELECTRICALS</textPath>
+  </text>
+
+  <!-- Bottom text -->
+  <text x="200" y="345" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="26" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">EST. 1994</text>
+
+  <!-- Brush-style B, traced from source artwork, solid white -->
+  <g transform="translate(122.1,112.5) scale(0.7114)">
+    <g transform="translate(0,246) scale(0.1,-0.1)" fill="#FFFFFF" stroke="none">
+      <path d="M5 2447 c-3 -6 -4 -171 -3 -366 l3 -354 56 74 c107 141 250 269 417 372 172 106 389 204 537 242 39 10 77 24 85 32 12 11 -74 13 -538 13 -434 0 -554 -3 -557 -13z M1624 2452 c3 -5 35 -24 71 -41 91 -45 176 -131 217 -216 105 -226 -19 -486 -329 -689 -57 -37 -105 -72 -109 -77 -10 -17 17 -39 51 -39 48 0 172 -34 240 -66 37 -17 84 -52 121 -89 49 -49 64 -72 82 -128 50 -155 11 -346 -116 -560 -103 -174 -298 -369 -447 -448 -82 -44 -88 -49 -74 -65 9 -11 89 -14 435 -14 l424 0 0 1220 0 1220 -286 0 c-157 0 -283 -4 -280 -8z M1180 1843 c-189 -31 -347 -81 -515 -164 -144 -71 -262 -154 -246 -173 8 -10 27 -7 93 16 132 44 237 35 270 -25 7 -13 11 -54 10 -99 -2 -108 2 -110 135 -53 273 117 501 273 553 380 19 39 20 48 8 72 -8 17 -27 33 -48 40 -33 11 -205 15 -260 6z M280 1373 c-38 -43 -95 -160 -105 -216 -4 -21 -14 -41 -23 -44 -14 -6 -75 5 -130 22 l-22 7 2 -558 3 -559 219 -3 c229 -3 255 2 236 38 -33 62 -41 150 -50 530 -10 423 -21 581 -51 712 -26 111 -36 120 -79 71z M1055 1174 c-112 -13 -240 -39 -257 -54 -18 -14 -22 -37 -34 -171 -20 -219 -21 -466 -3 -484 12 -12 32 -7 139 36 359 144 593 341 594 500 0 84 -60 139 -180 164 -63 13 -182 17 -259 9z M864 88 c-57 -30 -66 -39 -53 -54 15 -19 112 -19 128 0 17 21 -48 68 -75 54z"/>
+    </g>
+  </g>
+</svg>
